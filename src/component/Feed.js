@@ -1,7 +1,20 @@
+import './Feed.css';
+import TweetBox from "./TweetBox";
+import Post from "./Post";
+
 const Feed = () => {
   return (
     <div className="feed">
-      <h1>feed</h1>
+      <div className="feed__header">
+        <h2>feed</h2>
+      </div>
+
+      <TweetBox/>
+
+      <Post/>
+      <Post/>
+      <Post/>
+      <Post/>
     </div>
   );
 };

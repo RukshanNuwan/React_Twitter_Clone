@@ -6,24 +6,24 @@ const Post = ({displayName, userName, isVerified, timeStamp, text, image, avatar
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src="https://avatars.githubusercontent.com/u/39560159?v=4"/>
+        <Avatar src={avatar}/>
       </div>
 
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              Rukshan Nuwan
-              <span className='post__headerSpecial'>
-                <Verified className="post__badge"/>
-                @rukshannuwan
+              {displayName}
+              <span className="post__headerSpecial">
+                {isVerified && <Verified className="post__badge"/>}
+                @{userName} 1h ago
               </span>
             </h3>
           </div>
 
           <div className="post__headerDescription">
             <p>
-              I challenge you to build a twitter clone with react
+              {text}
               {/*  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae eum, excepturi fuga ipsam magnam*/}
               {/*  maxime molestias nulla numquam officia optio perferendis quis sed similique soluta sunt tenetur, veritatis*/}
               {/*  voluptate.*/}
@@ -31,7 +31,7 @@ const Post = ({displayName, userName, isVerified, timeStamp, text, image, avatar
           </div>
         </div>
 
-        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt=""/>
+        <img src={image} alt=""/>
 
         <div className="post__footer">
           <ChatBubbleOutline fontSize="small"/>
